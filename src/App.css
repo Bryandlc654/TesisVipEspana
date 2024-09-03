@@ -1580,12 +1580,9 @@ select {
 }
 
 .opinions__group {
-  position: relative;
-}
-
-.opinions__slider {
-  display: flex;
-  overflow-x: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
 }
 
 .opinions__figure {
@@ -1598,45 +1595,92 @@ select {
   aspect-ratio: 200 / 353;
 }
 
-.opinions__btn {
-  position: absolute;
-  top: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 3rem;
-  color: var(--color-four);
-  background-color: var(--color-three);
-  border-radius: 50%;
-  border: none;
-  border: 2px solid var(--color-three);
-  cursor: pointer;
-  transform: translateY(-50%);
-  transition: color .5s, background-color .5s;
-
-  &:hover,
-  &:focus {
-      color: var(--color-three);
-      background-color: var(--color-four);
-  }
+.opinion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 500px;
+    margin-inline: auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--color-four);
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 25px 0px #00000026;
 }
 
-.opinions__btn svg {
-  width: 20px;
-  height: 20px;
+.opinion__title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-three);
 }
 
-.opinions__btn:nth-of-type(1) {
-  left: 0;
+.opinion__audio {
+    width: 100%;
 }
 
-.opinions__btn:nth-of-type(1) svg {
-  transform: rotate(180deg);
+.opinion__user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
-.opinions__btn:nth-of-type(2) {
-  right: 0;
+.opinion__image {
+    order: -1;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.opinion__texts {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.opinion__name {
+    font-size: .95rem;
+    font-weight: 700;
+    color: var(--color-two);
+}
+
+.opinion__info {
+    font-size: .85rem;
+    color: var(--color-two);
+}
+
+@media (width >= 600px) {
+    .opinion__user {
+        align-self: flex-end;
+        flex-direction: row;
+        align-items: center;
+        text-align: right;
+    }
+
+    .opinion__image {
+        order: 1;
+    }
+}
+
+@media (width >= 768px) {
+    .opinion__title {
+        font-size: 1.5rem;
+    }
+
+    .opinion__paragraph {
+        font-size: 1.1rem;
+    }
+
+    .opinion__name {
+        font-size: 1rem;
+    }
+    
+    .opinion__info {
+        font-size: .9rem;
+    }
 }
 
 

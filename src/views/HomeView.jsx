@@ -8,7 +8,6 @@ import InfoSection from "../components/home/InfoSection";
 import Form from "../components/generals/Form";
 import ContactSection from "../components/home/ContactSection";
 import CarrouselService from "../components/home/CarrouselService";
-import CarrouselClient from "../components/home/CarrouselClient";
 
 import { Link } from "react-router-dom";
 import useScrollToTop from "../hooks/useScrollToTop";
@@ -50,9 +49,9 @@ function HomeView() {
                         <div className="hero__texts">
                             <p className="hero__info">Somos expertos en</p>
                             <h1 className="hero__title title">
-                                <span className="resalt">Consultoría y Redacción de Tesis</span>
+                                <span className="resalt">Consultoría y Redacción</span>
                                 <br />
-                                para Pregado y Postgrado
+                                de TFG y TFM
                             </h1>
                             <div className="hero__buttons">
                                 <a className="btn btn-primary" href="https://wa.link/jt1gt7" rel="noopener noreferrer" target="_blank" title="WhatsApp de Tesis VIP">Contáctanos</a>
@@ -276,8 +275,21 @@ function HomeView() {
                             <h2 className="opinions__title title">Respaldados por nuestros Clientes</h2>
                         </div>
                         <div className="opinions__group">
-                            <CarrouselClient />
-
+                            {/* <CarrouselClient /> */}
+                            <article className="opinion">
+                                <p className="opinion__title paragraph">Redacción de Trabajos de Fin de Grado</p>
+                                <p className="opinion__paragraph paragraph">Hacéis un gran trabajo, muchas gracias</p>
+                                <audio className="opinion__audio" src="#" controls></audio>
+                                <div className="opinion__user">
+                                    <div className="opinion__texts">
+                                        <p className="opinion__name">Paula</p>
+                                        <p className="opinion__info">Estudiante de Psicología</p>
+                                    </div>
+                                    <div className="opinion__image">
+                                        <img src="./assets/img/imagen-whatsapp.webp" alt="Foto de perfil de Tesis VIP en WhatsApp" />
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </section>

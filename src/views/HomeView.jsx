@@ -8,6 +8,7 @@ import InfoSection from "../components/home/InfoSection";
 import Form from "../components/generals/Form";
 import ContactSection from "../components/home/ContactSection";
 import CarrouselService from "../components/home/CarrouselService";
+import CarrouselClient from "../components/home/CarrouselClient";
 
 import { Link } from "react-router-dom";
 import useScrollToTop from "../hooks/useScrollToTop";
@@ -275,8 +276,8 @@ function HomeView() {
                             <h2 className="opinions__title title">Respaldados por nuestros Clientes</h2>
                         </div>
                         <div className="opinions__group">
-                            {/* <CarrouselClient /> */}
-                            <article className="opinion">
+                            <CarrouselClient />
+                            {/*   <article className="opinion">
                                 <p className="opinion__title paragraph">Redacción de Trabajos de Fin de Grado</p>
                                 <p className="opinion__paragraph paragraph">Hacéis un gran trabajo, muchas gracias</p>
                                 <audio className="opinion__audio" src="#" controls></audio>
@@ -289,7 +290,7 @@ function HomeView() {
                                         <img src="./assets/img/imagen-whatsapp.webp" alt="Foto de perfil de Tesis VIP en WhatsApp" />
                                     </div>
                                 </div>
-                            </article>
+                            </article> */}
                         </div>
                     </div>
                 </section>
